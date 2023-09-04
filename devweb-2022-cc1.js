@@ -14,8 +14,6 @@ let nbGuesses = 0;
 let maxGuesses = 0;
 
 function game(_evt){
-  console.log(secretNumber)
-  console.log($numUsr)
   //Si le nombre d'essaies === aux nombres d'essai max auquelle l'utilisateur est autoriser alors stopper la partie.
   if(nbGuesses === maxGuesses){
     $guessBtn.toggleAttribute("disabled", true)
@@ -55,7 +53,6 @@ function launchGame(_evt) {
     $startBtn.toggleAttribute("disabled", true)
     $guessBtn.addEventListener("enter", game)
     $guessBtn.addEventListener("click", game)
-    console.log(secretNumber)
 }
 $startBtn.addEventListener("click", launchGame);
 $startBtn.addEventListener("enter", launchGame);
@@ -77,8 +74,6 @@ function addCow(evt) {
     evt.target.appendChild($img); 
 }
 
-// window.evt.x + document.body.scrollLeft + document.documentElement.scrollLeft;
-// top1 = window.evt.y + document.body.scrollTop + document.documentElement.scrollTop;
 
 function toggleCow(_evt) {
   if (document.onmousedown instanceof Function) {
